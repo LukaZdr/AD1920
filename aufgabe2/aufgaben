@@ -1,0 +1,71 @@
+Aufgabe 1
+
+Implementieren Sie eine Klasse "Queue", die wie eine Schlange (wie in der Vorlesung beschrieben) funktioniert. Die Klasse soll mindestens
+die Methoden isEmpty(), head(), enqueue(x) und dequeue() besitzen. Die Schlange muss nie mehr als 100 Elemente beinhalten können.
+
+Hinweis 1: Im Java-Test wird erwartet, dass der Stack "Strings" speichert. Da Python dynamisch getypt ist, ist dies hier nicht der Fall.
+
+Hinweis 2: Es ist nicht erlaubt, "import" zu verwenden!
+
+Zum Beispiel:
+
+Test	Result
+q = Queue()
+print(q.isEmpty())
+True
+q = Queue()
+q.enqueue("Kekse")
+q.enqueue("Kuchen")
+print(q.head())
+Kekse
+
+
+
+Aufgabe 2
+
+Die Umgekehrte Polnische Notation / Postfix-Notation ist eine spezielle Schreibweise für Mathematische Ausdrücke, bei der zuerst die Zahlen und
+danach die Operatoren angegeben werden. Der Ausdruck (1 * 2)+(3 * 4) wäre dementsprechend in dieser Notation 1 2 * 3 4 * +.
+
+Ein Rechner für diese Notation lässt sich gut mit Hilfe eines Stacks abbilden. Dabei wird die Notation von links nach rechts durchgegangen.
+Falls eine Zahl bearbeitet wird, so wird diese auf den Stack gelegt. Wenn ein Operator kommt, dann werden die obersten beiden Zahlen vom Stack
+genommen, der Operator ausgeführt und das Ergebnis wieder auf den Stack gelegt. Nach der Rechnung ist das Ergebnis als einzige Zahl auf dem Stack.
+
+In dieser Aufgabe sollen sie einen solchen Rechner in einer Methode implementieren. Dieser soll die Operatoren plus (+), minus (-), mal (*) und
+geteilt (/, abgerundet) verarbeiten können. Sie erhalten dafür einen Stack mit folgenden bekannten Methoden, den Sie bei Ihrer Implementation
+verwenden sollen:
+
+* emptystack()
+* head()
+* push(int i)
+* pop()
+
+Die Methode erhält als Eingabe eine Liste mit Strings, bei der die Zahlen und Operatoren bereits getrennt sind
+(z.B.: input = ["1", "2", "*", "3", "4", "*", "+"]). Strings können Sie mit Hilfe von "int(myString)" umwandeln. Zudem erhalten Sie einen Stack,
+den Sie verwenden sollen. Zurückgeben soll die Methode das richtige Ergebnis als Integer.
+
+Sie können davon ausgehen, dass die Eingabe eine korrekte Formel ist.
+
+Zum Beispiel:
+
+Test	Result
+input = ["2", "1", "-"]
+s = CustomStack()
+result = Calculator(input, s);
+print(int(result));
+1
+input = ["1", "2", "*", "3", "4", "*", "+"]
+s = CustomStack()
+result = Calculator(input, s)
+print(int(result))
+14
+input = ["4", "2", "/", "4", "4", "4", "/", "2", "*", "/", "-"]
+s = CustomStack()
+result = Calculator(input, s)
+print(int(result))
+0
+input = ["278241", "489", "/", "6456", "*", "46546", "+"]
+s = CustomStack()
+result = Calculator(input, s)
+print(int(result))
+3720010
+
