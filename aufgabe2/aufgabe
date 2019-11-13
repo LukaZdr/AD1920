@@ -1,0 +1,17 @@
+Implementieren Sie eine Klasse "Queue", die wie eine Schlange (wie in der Vorlesung beschrieben) funktioniert. Die Klasse soll mindestens die Methoden isEmpty(), head(), enqueue(x) und dequeue() besitzen. Die Schlange muss nie mehr als 100 Elemente beinhalten können.
+
+Hinweis 1: Im Java-Test wird erwartet, dass der Stack "Strings" speichert. Da Python dynamisch getypt ist, ist dies hier nicht der Fall.
+
+Hinweis 2: Es ist nicht erlaubt, "import" zu verwenden!
+
+Zum Beispiel:
+
+Test	Result
+q = Queue()
+print(q.isEmpty())
+True
+q = Queue()
+q.enqueue("Kekse")
+q.enqueue("Kuchen")
+print(q.head())
+Kekse
