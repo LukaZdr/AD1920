@@ -1,0 +1,34 @@
+Implementieren sie einen beliebigen Suchalgorithmus aus der Vorlesung, welcher die übergebene Liste sortiert.
+
+
+
+Die Liste hat folgende Operationen, welche als Eingabe Indizes der Listenelemente bekommt:
+
+* Swap(int x, int y) <- Tauscht die Items an der Position x und y
+
+* Larger(int x, int y) <- Liefert true zurück, falls das Element an Position x echt größer als das Element an Position y ist
+
+* Smaller(int x, int y) <- Liefert true zurück, falls das Element an Position y echt größer als das Element an Position x ist
+
+* Equal(int x, int y) <- Liefert true zurück, falls das Element an Position y gleich groß wie das Element an Position x ist
+
+* Length() <- Liefert die Länge der Liste zurück
+
+
+Zum Beispiel:
+
+Test	Result
+lts = ListToSort([2, 3, 1, 5, 99, 33])
+lts = listSorter(lts)
+print(lts.isSorted())
+print(lts.isSame([1, 2, 3, 5, 33, 99]))
+True
+True
+lts = ListToSort([randrange(0, 9999999, 1)])
+lts = listSorter(lts)
+print(lts.isSorted())
+True
+lts = ListToSort([7, 7, 7, 7, 7, 7, 7])
+lts = listSorter(lts)
+print(lts.isSorted())
+Tru
